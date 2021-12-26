@@ -45,6 +45,8 @@ function buildFlag(option: keyof PdfToTextOptions, options?: PdfToTextOptions) {
 }
 
 function buildCommand(pdf: string, options?: PdfToTextOptions) {
+  console.log(process.env.PATH);
+
   return [
     path.join(__dirname, '../bin/pdftotext.exe'),
     buildArgument('f', options),
